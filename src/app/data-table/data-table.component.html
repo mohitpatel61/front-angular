@@ -1,0 +1,10 @@
+<ngx-datatable
+  [rows]="rows"
+  [columns]="columns"
+  [count]="count"
+  [limit]="pageSize"
+  [offset]="offset"
+  class="table table-striped table-bordered"
+  (page)="onPage($event)"
+  [loadingIndicator]="isLoading">
+</ngx-datatable>

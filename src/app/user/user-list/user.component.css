@@ -1,0 +1,69 @@
+/* Ensure the ngx-datatable has a border */
+ngx-datatable.bootstrap {
+  border: 1px solid #444; /* Dark border around the table */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #2c2c2c; /* Dark background for the table */
+  color: #f1f1f1; /* Light text color for visibility */
+}
+
+/* Style header to match dark theme */
+ngx-datatable.bootstrap .datatable-header {
+  background-color: #333; /* Dark background for header */
+  color: #f1f1f1; /* Light text color */
+  border-bottom: 1px solid #555; /* Dark bottom border for header */
+}
+
+/* Add borders to table cells */
+ngx-datatable.bootstrap .datatable-body-cell {
+  border-right: 1px solid #555; /* Dark border between cells */
+  color: #f1f1f1; /* Ensure text inside cells is light */
+  padding: 10px; /* Add padding for better spacing */
+}
+
+/* Row styling with a bottom border for separation */
+ngx-datatable.bootstrap .datatable-body-row {
+  background-color: #2c2c2c; /* Dark background for rows */
+  border-bottom: 1px solid #555; /* Add bottom border for row separation */
+}
+
+/* Hover effect for rows */
+ngx-datatable.bootstrap .datatable-body-row:hover {
+  background-color: #444; /* Slightly lighter dark background on hover */
+  cursor: pointer; /* Make cursor pointer to indicate action */
+}
+
+/* Add padding for action buttons */
+ngx-datatable.bootstrap .datatable-body-cell-action button {
+  padding: 5px 10px;
+  color: #fff; /* White color for icons/buttons */
+}
+
+/* Style for pagination */
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #f1f1f1; /* Light text for pagination */
+}
+
+.pagination-controls button {
+  background-color: #444; /* Dark background for buttons */
+  color: #f1f1f1; /* Light text color */
+  border: 1px solid #555; /* Border for buttons */
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.pagination-controls button:hover {
+  background-color: #555; /* Lighter dark color on hover */
+}
+
+.pagination-controls button[disabled] {
+  background-color: #333; /* Dark color for disabled buttons */
+  cursor: not-allowed; /* Change cursor for disabled buttons */
+}
+
+.pagination-controls span {
+  color: #f1f1f1; /* Light text for page number */
+}

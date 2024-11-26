@@ -1,0 +1,17 @@
+<div *ngIf="user$ | async as user; else loading" class="user-detail-container">
+  <h2>User Details</h2>
+
+  <!-- Basic User Info -->
+  <div class="user-info">
+    <h3>{{ user.firstName }} {{ user.lastName }} ({{ user.gender }})</h3>
+    <p><strong>Age:</strong> {{ user.age }}</p>
+    <p><strong>Email:</strong> <a [href]="'mailto:' + user.email">{{ user.email }}</a></p>
+    <p><strong>Phone:</strong> {{ user.phone }}</p>
+  </div>
+
+  <button class="back-button" (click)="goBackToList()">Back to List</button>
+</div>
+
+<ng-template #loading>
+  <p>Loading user details...</p>
+</ng-template>

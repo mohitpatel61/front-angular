@@ -1,0 +1,79 @@
+/* Background and Text Colors */
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for readability */
+  }
+  
+  h1, h2, h3, h5 {
+    color: #ffffff; /* White for main headings */
+  }
+  
+  p, a {
+    color: #b0b0b0; /* Slightly lighter gray for regular text */
+  }
+  
+  a:hover {
+    color: #0d6efd; /* Bootstrap primary color for link hover effect */
+  }
+  
+  /* Section and Card Styles */
+  .container {
+    max-width: 800px;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #1e1e1e; /* Darker shade for sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  /* Images */
+  .img-fluid,
+  .rounded-circle {
+    border: 2px solid #333; /* Border around images for better visibility */
+  }
+  
+  .rounded-circle {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Contact Icons */
+  .contact-info i {
+    color: #0d6efd; /* Bootstrap primary color for icons */
+  }
+  
+  .contact-info h5 {
+    color: #ffffff;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  
+  .contact-info p {
+    font-size: 0.95rem;
+    color: #b0b0b0;
+  }
+  
+  /* Team Member Section */
+  .text-center h2, .text-center h5 {
+    color: #ffffff;
+  }
+  
+  .text-center p {
+    color: #b0b0b0;
+  }
+  
+  /* Map Section */
+  .map-container {
+    overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 8px;
+  }
+  
+  /* Bootstrap Card Shadow */
+  .border {
+    border-color: rgba(255, 255, 255, 0.1) !important; /* Light border */
+    box-shadow: 0px 2px 8px rgba(255, 255, 255, 0.1); /* Soft shadow */
+  }
+  

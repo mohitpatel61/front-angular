@@ -1,0 +1,23 @@
+/* Highlight invalid fields with a red border */
+.invalid-field .mat-form-field-underline {
+  background-color: red !important;
+}
+
+/* Make the label color red when the field is invalid */
+.invalid-field .mat-label {
+  color: red !important;
+}
+
+/* Show error messages in red */
+.invalid-field mat-error {
+  color: red !important;
+}
+
+/* Style for global error message */
+.alert-danger {
+  color: red;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}

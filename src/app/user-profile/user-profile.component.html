@@ -1,0 +1,166 @@
+<div class="container mt-4">
+    <h3 class="text-center mb-4">My Profile</h3>
+  
+    <!-- Loading Spinner (Visible when isSaving is true) -->
+    <div *ngIf="isSaving" class="d-flex justify-content-center">
+      <mat-spinner diameter="30"></mat-spinner>
+    </div>
+  
+    <mat-card class="shadow-sm p-4">
+      <div class="profile-container d-flex">
+        <!-- Left Sidebar: Profile Image & Name -->
+        <div class="profile-sidebar">
+            <div class="profile-pic-container text-center">
+              <!-- Display Profile Picture -->
+              <img [src]="profilePicUrl || 'assets/default-profile.png'" alt="Profile Picture" class="profile-pic" />
+              
+              <!-- Upload Profile Picture -->
+              <input 
+                type="file" 
+                accept="image/*" 
+                (change)="onProfilePicSelected($event)" 
+                class="d-none" 
+                #fileInput 
+              />
+              <button 
+                mat-button 
+                color="primary" 
+                class="mt-2" 
+                (click)="fileInput.click()">
+                Update Picture
+              </button>
+            </div>
+            <h5 class="heading">{{ userName }}</h5>
+          </div>
+          
+        <!-- Right Sidebar: Form Sections -->
+        <div class="profile-details ml-4 flex-grow-1">
+          <form [formGroup]="userForm">
+            <!-- Personal Details Section -->
+            <h5 class="section-title heading">Personal Details</h5>
+            <div class="personal-details">
+              <div class="form-group">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label>First Name</mat-label>
+                  <input matInput formControlName="firstName" required />
+                  <mat-error *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched">
+                    First Name is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <div class="form-group">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput formControlName="lastName" required />
+                  <mat-error *ngIf="userForm.get('lastName')?.invalid && userForm.get('lastName')?.touched">
+                    Last Name is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <div class="form-group">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label>Gender</mat-label>
+                  <mat-select formControlName="gender" required>
+                    <mat-option value="Male">Male</mat-option>
+                    <mat-option value="Female">Female</mat-option>
+                    <mat-option value="Other">Other</mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="userForm.get('gender')?.invalid && userForm.get('gender')?.touched">
+                    Gender is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <div class="form-group">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label>Date of Birth</mat-label>
+                  <input matInput type="date" formControlName="dob" required />
+                  <mat-error *ngIf="userForm.get('dob')?.invalid && userForm.get('dob')?.touched">
+                    Date of Birth is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <div class="form-group">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label>Email</mat-label>
+                  <input matInput formControlName="email" required email />
+                  <mat-error *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+                    Enter a valid email address
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <div class="form-group">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label>Phone</mat-label>
+                  <input matInput formControlName="phone" required />
+                  <mat-error *ngIf="userForm.get('phone')?.invalid && userForm.get('phone')?.touched">
+                    Enter a valid phone number
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+  
+            <!-- Background Details Section -->
+            <h5 class="section-title mt-4 heading">Background Details</h5>
+            <div class="background-details">
+              <div class="form-group">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label>Address</mat-label>
+                  <textarea matInput formControlName="address" required></textarea>
+                  <mat-error *ngIf="userForm.get('address')?.invalid && userForm.get('address')?.touched">
+                    Address is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <div class="form-group">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label>Nationality</mat-label>
+                  <input matInput formControlName="nationality" required />
+                  <mat-error *ngIf="userForm.get('nationality')?.invalid && userForm.get('nationality')?.touched">
+                    Nationality is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <div class="form-group">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label>Role</mat-label>
+                  <input matInput formControlName="role" required />
+                  <mat-error *ngIf="userForm.get('role')?.invalid && userForm.get('role')?.touched">
+                    Role is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <div class="form-group">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label>About Yourself</mat-label>
+                  <textarea matInput formControlName="aboutYourself"></textarea>
+                </mat-form-field>
+              </div>
+  
+              <div class="form-group">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label>Speciality</mat-label>
+                  <input matInput formControlName="speciality" />
+                </mat-form-field>
+              </div>
+  
+              <div class="form-group">
+                <mat-form-field appearance="fill" class="w-100">
+                  <mat-label>Education</mat-label>
+                  <input matInput formControlName="education" />
+                </mat-form-field>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  

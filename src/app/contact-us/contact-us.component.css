@@ -1,0 +1,15 @@
+.contact-us {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .info {
+    margin-bottom: 2em;
+  }
+  
+  .map-container {
+    height: 400px;
+  }
+  

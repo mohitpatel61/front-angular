@@ -1,0 +1,26 @@
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img-top {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+  
+  h2 {
+    color: #5a5a5a;
+  }
+  
+  h3 {
+    color: #007bff;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  

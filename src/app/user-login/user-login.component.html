@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>User Login</h2>
+    <form [formGroup]="userLoginForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Basic User Information -->
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field appearance="fill" class="mb-3 w-100">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required>
+            <mat-error *ngIf="isInvalid('email')">Email is required.</mat-error>
+          </mat-form-field>
+        </div>
+
+        
+        <div class="col-6">
+          <mat-form-field appearance="fill" class="mb-3 w-100">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" required>
+            <mat-error *ngIf="isInvalid('password')">Last Name is required.</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <button mat-raised-button color="primary" type="submit">Login</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,53 @@
+{
+  "name": "essentials",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^18.2.9",
+    "@angular/cdk": "~18.2.10",
+    "@angular/common": "^18.2.9",
+    "@angular/compiler": "^18.2.9",
+    "@angular/core": "^18.2.9",
+    "@angular/forms": "^18.2.9",
+    "@angular/google-maps": "^18.2.12",
+    "@angular/material": "~18.2.10",
+    "@angular/platform-browser": "^18.2.9",
+    "@angular/platform-browser-dynamic": "^18.2.9",
+    "@angular/router": "^18.2.9",
+    "@ngx-formly/bootstrap": "^6.3.10",
+    "@ngx-formly/core": "^6.3.10",
+    "@ngx-formly/material": "^6.3.10",
+    "@swimlane/ngx-datatable": "^20.1.0",
+    "angular-datatables": "^18.0.0",
+    "bootstrap": "^5.3.3",
+    "datatables.net": "^2.1.8",
+    "datatables.net-bs4": "^2.1.8",
+    "datatables.net-dt": "^2.1.8",
+    "jquery": "^3.7.1",
+    "nodemon": "^3.1.7",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^18.2.10",
+    "@angular/cli": "^18.2.10",
+    "@angular/compiler-cli": "^18.2.9",
+    "@types/jasmine": "~5.1.0",
+    "@types/jest": "^29.5.14",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.4.2"
+  }
+}

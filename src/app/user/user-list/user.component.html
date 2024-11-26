@@ -1,0 +1,72 @@
+<div class="container mt-4">
+  <h3>User List</h3>
+
+  <div class="mb-3">
+    <a [routerLink]="'/add-user'" class="btn btn-primary">Add User</a>
+  </div>
+  
+  <!-- Loading Spinner (Visible when isLoading is true) -->
+  <div *ngIf="isLoading" class="text-center">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <!-- ngx-datatable for displaying users -->
+  <ngx-datatable
+    *ngIf="!isLoading"
+    class="bootstrap table table-bordered table-striped"
+    [rows]="usersData"
+    [columns]="columns"
+    [loadingIndicator]="isLoading"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="'auto'"
+    [reorderable]="true"
+    [columnMode]="'force'"
+    [limit]="pageSize">
+    
+    <ngx-datatable-column name="First Name" prop="firstName"></ngx-datatable-column>
+    <ngx-datatable-column name="Last Name" prop="lastName"></ngx-datatable-column>
+    <ngx-datatable-column name="Age" prop="age"></ngx-datatable-column>
+    <ngx-datatable-column name="Email" prop="email"></ngx-datatable-column>
+    <ngx-datatable-column name="Phone" prop="phone"></ngx-datatable-column>
+
+    <!-- Define Actions Column -->
+    <ngx-datatable-column name="Actions" [width]="150" [sortable]="false">
+      <ng-template ngx-datatable-cell-template let-row="row">
+        <button *ngIf="row?.id" class="btn btn-link" (click)="userDetail(row.id)" title="View User">
+          <i class="fas fa-eye"></i> View
+        </button>
+        <button *ngIf="row?.id" class="btn btn-link mx-2" (click)="editUser(row.id)" title="Edit User">
+          <i class="fas fa-edit"></i> Edit
+        </button>
+        <button *ngIf="row?.id" class="btn btn-link" (click)="deleteUser(row.id)" title="Delete User">
+          <i class="fas fa-trash"></i> Delete
+        </button>
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+
+  <!-- Pagination Controls -->
+  <div class="pagination-controls mt-3 d-flex justify-content-between align-items-center">
+    <!-- Previous Button -->
+    <button
+      class="btn btn-secondary btn-sm"
+      (click)="onPageChange(currentPage - 1)"
+      [disabled]="currentPage <= 1">
+      Previous
+    </button>
+
+    <!-- Display Current Page -->
+    <span>Page {{ currentPage }} of {{ totalRecords }}</span>
+
+    <!-- Next Button -->
+    <button
+      class="btn btn-secondary btn-sm"
+      (click)="onPageChange(currentPage + 1)"
+      [disabled]="currentPage >= totalRecords">
+      Next
+    </button>
+  </div>
+</div>

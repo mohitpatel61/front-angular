@@ -1,0 +1,63 @@
+<div class="container mt-4">
+    <div class="row">
+      <!-- Welcome Message -->
+      <div class="col-12 text-center" *ngIf="isAuthenticated()">
+        <!-- <h2>Welcome to the Dashboard</h2> -->
+        <h2>Welcome, {{ userName }}!</h2>
+        <p>Your personalized dashboard with dummy data!</p>
+      </div>
+    </div>
+  
+    <!-- Dummy Data Grid -->
+    <div class="row">
+      <!-- Dummy User 1 Card -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="assets/user1.jpg" class="card-img-top" alt="User Image 1">
+          <div class="card-body">
+            <h5 class="card-title">User 1</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+            <a href="#" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Dummy User 2 Card -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="assets/user2.jpg" class="card-img-top" alt="User Image 2">
+          <div class="card-body">
+            <h5 class="card-title">User 2</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+            <a href="#" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Dummy User 3 Card -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="assets/user3.jpg" class="card-img-top" alt="User Image 3">
+          <div class="card-body">
+            <h5 class="card-title">User 3</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+            <a href="#" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- More dummy data (optional) -->
+    <div class="row">
+      <!-- Recent Activity -->
+      <div class="col-12">
+        <h3>Recent Activity</h3>
+        <ul class="list-group">
+          <li class="list-group-item">User 1 logged in</li>
+          <li class="list-group-item">User 2 updated profile</li>
+          <li class="list-group-item">User 3 created a new post</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

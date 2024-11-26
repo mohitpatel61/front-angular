@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/header/header.component.css"],
+  "sourcesContent": ["header {\n    margin: 3rem auto;\n    text-align: center;\n  }\n  \n  img {\n    width: 8rem;\n  }\n  \n  h1 {\n    margin: 1rem auto;\n    background: -webkit-linear-gradient(45deg, #f9096d, #b700ff);\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    font-size: 3rem;\n  }\n  "],
+  "mappings": ";AAAA;AACI,UAAQ,KAAK;AACb,cAAY;AACd;AAEA;AACE,SAAO;AACT;AAEA;AACE,UAAQ,KAAK;AACb,cAAY,wBAAwB,KAAK,EAAE,OAAO,EAAE;AACpD,2BAAyB;AACzB,2BAAyB;AACzB,aAAW;AACb;",
+  "names": []
+}

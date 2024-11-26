@@ -1,0 +1,64 @@
+<div class="container">
+  <h2>Add New User</h2>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    
+    <!-- Basic User Information -->
+    <h4>Basic Information</h4>
+    <div class="row">
+      <div class="col-6">
+        <mat-form-field appearance="fill" class="mb-3 w-100">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" required>
+          <mat-error *ngIf="isInvalid('firstName')">First Name is required.</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field appearance="fill" class="mb-3 w-100">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" required>
+          <mat-error *ngIf="isInvalid('lastName')">Last Name is required.</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Gender</mat-label>
+          <mat-select formControlName="gender" required>
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+            <mat-option value="other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </div>
+      <div class="col-6">
+        <mat-form-field appearance="fill" class="mb-3 w-100">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" required (blur)='checkAlreadyExist()'>
+          <mat-error *ngIf="isInvalid('email')">Valid email is required.</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+  <!-- Gender -->
+  
+    <div class="row">
+      <div class="col-6">
+        <mat-form-field appearance="fill" class="mb-3 w-100">
+          <mat-label>Phone</mat-label>
+          <input matInput formControlName="phone" required>
+          <mat-error *ngIf="isInvalid('phone')">Phone number is required.</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field appearance="fill" class="mb-3 w-100">
+          <mat-label>Age</mat-label>
+          <input matInput formControlName="age" type="number" required>
+          <mat-error *ngIf="isInvalid('age')">Valid age is required.</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit">Add User</button>
+  </form>
+</div>
